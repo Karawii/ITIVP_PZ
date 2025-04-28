@@ -82,20 +82,6 @@
                     <img src="img/otherImg/MainPage/5.jpg" alt="" class="galeryItem">
                     <p class="galeryTxt">Контакты</p>
                 </a>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const currentPage = window.location.pathname.split("/").pop();
-                        const galleryLinks = document.querySelectorAll('.galeruLinks');
-
-                        galleryLinks.forEach(link => {
-                            const linkHref = link.getAttribute('href');
-                            if (linkHref === currentPage) {
-                                link.style.display = 'none';
-                            }
-                        });
-                    });
-                </script>
             </section>
 
             <br><h2>Расписание занятий</h2>
@@ -263,36 +249,6 @@
             </form>
         </div>
     </div>
-
-    <script>
-        function openForm(time, day, training, trainer) {
-        document.getElementById('time').value = time;
-        document.getElementById('day').value = day;
-        document.getElementById('training').value = training;
-        document.getElementById('trainer').value = trainer;
-        const modal = document.getElementById('bookingFormModal');
-        modal.style.display = 'block'; 
-        const modalContent = modal.querySelector('.modal-content');
-        modalContent.style.marginTop = `${(window.innerHeight - modalContent.offsetHeight) / 2}px`;
-        }
-
-        function closeForm() {
-            document.getElementById('bookingFormModal').style.display = 'none';
-        }
-
-        document.getElementById('bookingForm').onsubmit = function(event) {
-            event.preventDefault();
-            alert('Вы успешно записались на ' + document.getElementById('training').value);
-            closeForm();
-        };
-
-        // Закрытие модального окна при клике вне его
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('bookingFormModal')) {
-                closeForm();
-            }
-        };
-    </script>
 </body>
 </main>
 <p>© 2025 Адреналин </p>
