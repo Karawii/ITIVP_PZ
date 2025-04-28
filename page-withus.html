@@ -13,22 +13,6 @@
 </head>
 
 <body>
-
-    <button id="scrollToTop" title="Go to top" onclick="scrollToTop()"></button>
-    <script>
-        window.onscroll = function() {
-            const button = document.getElementById("scrollToTop");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                button.classList.add('show');
-            } else {
-                button.classList.remove('show');
-            }
-        };
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
     <header>
         <div class="container">
             <div class="contentBox headerBox">
