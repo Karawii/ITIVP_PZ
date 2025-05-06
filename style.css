@@ -1672,10 +1672,16 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    height: 25px;
+    align-items: center;
 }
 
 button:hover {
     background-color: #218838;
+}
+
+button label {
+    margin: 0;
 }
 
 .modal {
@@ -1698,11 +1704,13 @@ button:hover {
     border-radius: 5px; 
 }
 
+#modalToggle:checked + .modal {
+    display: block;
+}
+
 .close {
-    color: #aaa;
+    cursor: pointer;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
 
 .close:hover,
@@ -1733,10 +1741,15 @@ button[type="submit"] {
     padding: 10px;
     cursor: pointer;
     width: 100%;
+    height: 40px;
 }
 
 button[type="submit"]:hover {
     background-color: #218838;
+}
+
+#modalToggle:checked + .modal {
+    display: block;
 }
 
 @media (max-width: 1000px) {

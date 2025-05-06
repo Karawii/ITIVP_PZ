@@ -81,21 +81,6 @@
                     <img src="img/otherImg/MainPage/5.jpg" alt="" class="galeryItem">
                     <p class="galeryTxt">Контакты</p>
                 </a>
-
-                <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const currentPage = window.location.pathname.split("/").pop();
-                        const galleryLinks = document.querySelectorAll('.galeruLinks');
-
-                        galleryLinks.forEach(link => {
-                            const linkHref = link.getAttribute('href');
-                            if (linkHref === currentPage) {
-                                link.style.display = 'none';
-                            }
-                        });
-                    });
-                </script>
-
             </section>
 
             <section class="OurWork">
